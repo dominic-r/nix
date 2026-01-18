@@ -45,7 +45,7 @@
     initContent = lib.mkMerge [
       (lib.mkBefore ''
         # Managed by Nix Home Manager
-        # Source: ~/Developer/s/nix2/home/modules/zsh.nix
+        # Source: ~/Developer/s/nix/home/modules/zsh.nix
         # Manual edits will be overwritten
       '')
       ''
@@ -203,7 +203,7 @@
         echo ""
         echo "To fix this, either:"
         echo "  1. Revert manual changes and reapply"
-        echo "  2. Add your changes to ~/Developer/s/nix2/home/modules/zsh.nix"
+        echo "  2. Add your changes to ~/Developer/s/nix/home/modules/zsh.nix"
         echo ""
         exit 1
       fi
