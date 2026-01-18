@@ -1,0 +1,109 @@
+{ config, pkgs, ... }:
+
+{
+  home.packages = with pkgs; [
+    # Rust toolchain
+    (rust-bin.stable.latest.default.override {
+      extensions = [ "rust-src" "rust-analyzer" ];
+    })
+
+    age
+    black
+    capstone
+    certbot
+    dos2unix
+    dotnet-sdk_10
+    emacs
+    ffmpeg_7
+    gdb
+    gnupg
+    mtools
+    pkg-config
+    ruff
+    ruby
+    skopeo
+    tesseract
+    tree-sitter
+    xorriso
+    libxml2.dev
+    libxslt.dev
+    xmlsec
+    xmlsec.dev
+    libtool
+    z3
+    zsh
+    ansible
+    awscli
+    bat
+    bazel_8
+    btop
+    bun
+    claude-code
+    cloc
+    cmake
+    codex
+    curl
+    element-desktop
+    eza
+    fastfetch
+    fd
+    fzf
+    gemini-cli
+    gh
+    git
+    glab
+    gnumake
+    go
+    go-task
+    golangci-lint
+    google-chrome
+    graphite-cli
+    helix
+    htop
+    javaPackages.compiler.openjdk25
+    jq
+    knot-dns
+    lua
+    maven
+    mysql84
+    nano
+    ncdu
+    nicotine-plus
+    ninja
+    nmap
+    nodejs_25
+    openai-whisper
+    opentofu
+    pandoc
+    php
+    pnpm
+    protobuf
+    protobufc
+    (python314.withPackages (ps: [ ps.tkinter ]))
+    rclone
+    rectangle
+    restic
+    ripgrep
+    shottr
+    slack
+    sops
+    sqlite
+    stripe-cli
+    telegram-desktop
+    tmux
+    tree
+    ty
+    typst
+    uv
+    vesktop
+    vscode
+    watch
+    websocat
+    wget
+    yq-go
+    yt-dlp
+    zig
+    zoom-us
+    zoxide
+  ];
+}
