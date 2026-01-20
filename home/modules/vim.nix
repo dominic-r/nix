@@ -16,20 +16,18 @@
         p.javascript
         p.go
         p.python
-        p.java
         p.markdown
         p.markdown_inline
         p.nix
         p.lua
-        p.vim
-        p.vimdoc
         p.json
         p.yaml
-        p.html
         p.css
+        p.scss
       ]))
 
       # File navigation and fuzzy finding
+      plenary-nvim
       telescope-nvim
       telescope-fzf-native-nvim
       nvim-tree-lua
@@ -37,7 +35,6 @@
 
       # Git integration
       gitsigns-nvim
-      vim-fugitive
 
       # UI improvements
       lualine-nvim
@@ -46,9 +43,6 @@
 
       # Color scheme
       tokyonight-nvim
-
-      # AI completion
-      copilot-vim
 
       # Utilities
       nvim-autopairs
@@ -162,24 +156,6 @@
       -- Keep visual mode when indenting
       keymap('v', '<', '<gv', { desc = 'Indent left' })
       keymap('v', '>', '>gv', { desc = 'Indent right' })
-
-      -- ============================================================================
-      -- GitHub Copilot
-      -- ============================================================================
-
-      -- Copilot keybindings
-      vim.g.copilot_no_tab_map = true
-      vim.g.copilot_assume_mapped = true
-
-      -- Accept Copilot suggestion with Ctrl+J
-      keymap('i', '<C-J>', 'copilot#Accept("\\<CR>")', { expr = true, silent = true, replace_keycodes = false })
-
-      -- Navigate suggestions
-      keymap('i', '<C-]>', '<Plug>(copilot-next)', { silent = true })
-      keymap('i', '<M-[>', '<Plug>(copilot-previous)', { silent = true })
-
-      -- Dismiss suggestion
-      keymap('i', '<C-\\>', '<Plug>(copilot-dismiss)', { silent = true })
 
       -- ============================================================================
       -- Treesitter
