@@ -167,11 +167,13 @@ in {
       init_repo "s-test" "Monorepo testing."
       init_repo "hl-bootstrap-automatic" "Homelab bootstrap (auto-synced from monorepo)."
       init_repo "m" "Mom's project."
+      init_repo "playground" "Playing around with random shit."
 
       install_hooks "s"
       install_hooks "s-test"
       install_hooks "hl-bootstrap-automatic" true
       install_hooks "m"
+      install_hooks "playground" true
     '';
   };
 
