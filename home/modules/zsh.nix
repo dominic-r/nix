@@ -19,7 +19,11 @@
 
     # Shell aliases
     shellAliases = {
-      nano = "hx";
+      n = "nvim";
+      nano = "nvim";
+      hx = "nvim";
+      vi = "nvim";
+      vim = "nvim";
       htop = "btop";
       cp = "cp -i";
       mv = "mv -i";

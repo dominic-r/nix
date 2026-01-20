@@ -14,7 +14,7 @@ in {
       user.email = "dominic@sdko.org";
       credential.helper = "store";
       push.default = "current";
-      core.editor = "hx";
+      core.editor = "nvim";
       gpg.format = "ssh";
       "gpg \"ssh\"".program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
       url."git@github.com:".insteadOf = "https://github.com/";
