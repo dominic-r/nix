@@ -168,12 +168,16 @@ in {
       init_repo "hl-bootstrap-automatic" "Homelab bootstrap (auto-synced from monorepo)."
       init_repo "m" "Mom's project."
       init_repo "playground" "Playing around with random shit."
+      init_repo "prog-2025-2026-tp" "Programming class 2025-2026 ~ Travaux Pratiques"
+      init_repo "prog-2025-2026-labo" "Programming class 2025-2026 ~ Laboratoires"
 
       install_hooks "s"
       install_hooks "s-test"
       install_hooks "hl-bootstrap-automatic" true
       install_hooks "m"
       install_hooks "playground" true
+      install_hooks "prog-2025-2026-tp" true
+      install_hooks "prog-2025-2026-labo" true
     '';
   };
 
