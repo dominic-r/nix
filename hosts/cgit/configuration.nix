@@ -170,6 +170,7 @@ in {
       init_repo "playground" "Playing around with random shit."
       init_repo "prog-2025-2026-tp" "Programming class 2025-2026 ~ Travaux Pratiques"
       init_repo "prog-2025-2026-labo" "Programming class 2025-2026 ~ Laboratoires"
+      init_repo "schcc" "School project."
 
       install_hooks "s"
       install_hooks "s-test"
@@ -178,6 +179,7 @@ in {
       install_hooks "playground" true
       install_hooks "prog-2025-2026-tp" true
       install_hooks "prog-2025-2026-labo" true
+      install_hooks "schcc"
     '';
   };
 
