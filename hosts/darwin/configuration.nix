@@ -28,6 +28,7 @@
     taps = [
       "bufbuild/buf"
       "hashicorp/tap"
+      "steipete/tap"
     ];
 
     brews = [
@@ -65,8 +66,9 @@
 
     casks = [
       "1password"
-      "claude"
       "1password-cli"
+      "claude"
+      "steipete/tap/codexbar"
       "ghostty"
       "multipass"
       "ngrok"

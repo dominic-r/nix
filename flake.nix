@@ -45,8 +45,8 @@
       # Helper to create baremetal NixOS server configurations
       # Note: docker-based servers are in infra/cluster/
       mkServer = { name, system ? "x86_64-linux", diskDevice ? "/dev/sda", modules ? [] }: nixpkgs.lib.nixosSystem {
-        inherit system;
         modules = [
+          { nixpkgs.hostPlatform = system; }
           disko.nixosModules.disko
           (import ./modules/disk-lvm.nix { device = diskDevice; })
           ./modules/common.nix
@@ -56,8 +56,8 @@
     in {
       # macOS configuration
       darwinConfigurations.dominic = nix-darwin.lib.darwinSystem {
-        system = "aarch64-darwin";
         modules = [
+          { nixpkgs.hostPlatform = "aarch64-darwin"; }
           ./hosts/darwin/configuration.nix
           home-manager.darwinModules.home-manager
           {
