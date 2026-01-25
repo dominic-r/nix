@@ -78,6 +78,7 @@
     php
     pnpm
     protobuf
+    protoc-gen-go
     protobufc
     (python314.withPackages (ps: [ ps.tkinter ]))
     rclone
