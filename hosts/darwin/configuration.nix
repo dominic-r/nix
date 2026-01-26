@@ -69,6 +69,7 @@
       "1password-cli"
       "claude"
       "steipete/tap/codexbar"
+      "steipete/tap/repobar"
       "ghostty"
       "multipass"
       "ngrok"
