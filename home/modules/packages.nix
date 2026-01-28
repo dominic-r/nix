@@ -12,10 +12,8 @@
     capstone
     certbot
     dos2unix
-    dotnet-sdk_10
     emacs
     ffmpeg_7
-    gdb
     gnupg
     mtools
     pkg-config
@@ -30,7 +28,6 @@
     xmlsec
     xmlsec.dev
     libtool
-    z3
     zsh
     ansible
     awscli
@@ -69,6 +66,7 @@
     nano
     ncdu
     nicotine-plus
+    nginx
     ninja
     nmap
     nodejs_25
@@ -96,7 +94,6 @@
     ty
     typst
     uv
-    vesktop
     vscode
     watch
     websocat

@@ -51,6 +51,7 @@
       "transmission-cli"
       "wireshark"
       "yamllint"
+      "fcgiwrap"  # nix: linux only
 
       # Cross-compilation toolchains
       "i686-elf-grub"
