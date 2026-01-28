@@ -80,7 +80,12 @@
 
       # NixOS server configurations
       nixosConfigurations = {
-        cgit = mkServer { name = "cgit"; };
+        cgit = mkServer {
+          name = "cgit";
+          modules = [
+            { nixpkgs.overlays = [ (import ./overlays/cgit.nix) ]; }
+          ];
+        };
         timemachine = mkServer { name = "timemachine"; };
 
         # myserver = mkServer { name = "myserver"; };
