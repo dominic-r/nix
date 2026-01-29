@@ -13,6 +13,7 @@
 }:
 
 let
+  python3WithPygments = python3.withPackages (ps: [ ps.pygments ]);
   cgitSrc = ../../../apps/cgit;
   makefile = builtins.readFile (cgitSrc + "/Makefile");
 
@@ -47,7 +48,7 @@ stdenv.mkDerivation {
   buildInputs = [
     openssl
     zlib
-    python3
+    python3WithPygments
   ];
 
   # Nix builds are sandboxed with no network access, so we can't use
@@ -60,10 +61,10 @@ stdenv.mkDerivation {
 
   postPatch = ''
     substituteInPlace filters/syntax-highlighting.py \
-      --replace-quiet "/usr/bin/env python3" "${python3}/bin/python3"
+      --replace-quiet "/usr/bin/env python3" "${python3WithPygments}/bin/python3"
 
     substituteInPlace filters/html-converters/md2html \
-      --replace-quiet "/usr/bin/env python3" "${python3}/bin/python3"
+      --replace-quiet "/usr/bin/env python3" "${python3WithPygments}/bin/python3"
   '';
 
   makeFlags = [
