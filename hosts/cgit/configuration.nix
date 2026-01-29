@@ -81,6 +81,9 @@ in {
 
     virtualHosts."git.sdko.net" = sslConfig // {
       locations = auth.locations // {
+        # cgit.js missing from NixOS cgit module's static file locations
+        "= /cgit.js".alias = "${pkgs.cgit}/cgit/cgit.js";
+
         "/" = {
           extraConfig = auth.forwardAuthConfig + ''
             proxy_set_header X-Real-IP $remote_addr;
